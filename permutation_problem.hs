@@ -21,8 +21,7 @@ rule4 (a1,a2,a3,a4,a5,a6)                           -- of numbers are multiples 
     =   areFactors (tupleConv (a1,a2,a3,a4,a5,a6)) == True
 
 possibles :: [(Int,Int,Int,Int,Int,Int)]            -- Gives a list of all possible tuples 
-                                                    -- representing six-digit numbers
-possibles
+possibles                                           -- representing six-digit numbers
     = map listConv possiblesList
 
 isSolution :: (Int,Int,Int,Int,Int,Int) -> Bool     -- Checks if all the rule
