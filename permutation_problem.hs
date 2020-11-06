@@ -20,13 +20,11 @@ rule4 :: (Int,Int,Int,Int,Int,Int) -> Bool          -- Returns true if the first
 rule4 (a1,a2,a3,a4,a5,a6)                           -- of numbers are multiples of the last
     =   areFactors (tupleConv (a1,a2,a3,a4,a5,a6)) == True
 
-{-*Part 5*-}
 possibles :: [(Int,Int,Int,Int,Int,Int)]            -- Gives a list of all possible tuples 
                                                     -- representing six-digit numbers
 possibles
     = map listConv possiblesList
 
-{-*Part 6*-}
 isSolution :: (Int,Int,Int,Int,Int,Int) -> Bool     -- Checks if all the rule
 isSolution (i1,i2,i3,i4,i5,i6)                      -- conditions are met, and returns
     |   rule1 (i1,i2,i3,i4,i5,i6) == True           -- a Bool
